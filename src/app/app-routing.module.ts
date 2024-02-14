@@ -9,7 +9,7 @@ const routes: Routes = [
   {path:"forgot-password", component:ForgotPasswordComponent},
   {path:'', redirectTo:"/login", pathMatch:'full'},
   {path:'**', component:NotFoundComponent},
-
+  {path:'admin', loadChildren: ()=>import('./modules/admin/admin.module').then((m)=>m.AdminModule)}
 ];
 
 @NgModule({
